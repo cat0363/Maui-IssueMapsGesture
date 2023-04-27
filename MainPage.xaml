@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_IssueMapsGesture.MainPage">
+
+    <Grid RowDefinitions="44,*">
+        <Button Grid.Row="0" x:Name="btnShowMap" Text="Show Map" BackgroundColor="Blue" TextColor="White" Clicked="btnShowMap_Clicked" />
+        <ScrollView Grid.Row="1" Orientation="Vertical">
+            <StackLayout Orientation="Vertical">
+                <!-- padding for validation -->
+                <Grid HeightRequest="550" /> 
+                <Frame x:Name="frmMap" Margin="10,5,50,10" Padding="2" BorderColor="#333333" CornerRadius="5" HasShadow="False" IsVisible="False">
+                    <Map x:Name="map" IsShowingUser="False" IsZoomEnabled="True" HeightRequest="600" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>
